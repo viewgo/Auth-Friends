@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const FriendListRow = styled.div`
-display: flex;
-flex-flow: row nowrap;
-justify-content: space-around;
-width: 100%;
-`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  width: 100%;
+`;
 
 export const Form = styled.div`
 display: flex;
@@ -31,7 +31,7 @@ form{
     width: 200px;
   }
 }
-`
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -78,10 +78,9 @@ export const Card = styled.div`
 
 export const CardInfo = styled.div`
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 `;
 
 export const CardButtons = styled.div`
-  
   align-self: start;
-`
+`;

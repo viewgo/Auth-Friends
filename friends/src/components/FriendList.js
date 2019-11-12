@@ -22,10 +22,12 @@ const axiosWithAuth = () => {
 /***** FRIENDS LIST *****/
 export default function FriendList() {
   const [data, setData] = useState();
+  const [trigger, setTrigger] = useState(false);
 
   useEffect(() => {
+    console.log("CHANGE TRIGGERED!");
     getData();
-  }, []);
+  }, [trigger]);
 
   const getData = () => {
     axiosWithAuth()
@@ -51,7 +53,7 @@ export default function FriendList() {
             ))}
           </List>
 
-          <FriendForm />
+          <FriendForm trigger={trigger} setTrigger={setTrigger} />
         </FriendListRow>
       </>
     );
