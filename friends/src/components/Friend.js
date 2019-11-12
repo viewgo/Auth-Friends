@@ -2,7 +2,7 @@
 import React from "react";
 
 //STYLES
-import { Card, CardInfo, CardButtons } from "../styles";
+import { Card, CardInfo, CardButtons, DeleteButton } from "../styles";
 
 /***** NAVIGATION *****/
 export default function Friend(props) {
@@ -16,7 +16,7 @@ export default function Friend(props) {
         <span>{friend.email}</span>
       </CardInfo>
       <CardButtons>
-      ✘
+      <DeleteButton onClick={(e) => props.deleteFriend(e, friend)}>✘</DeleteButton>
       </CardButtons>
     </Card>
   );

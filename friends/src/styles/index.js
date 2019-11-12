@@ -84,3 +84,11 @@ export const CardInfo = styled.div`
 export const CardButtons = styled.div`
   align-self: start;
 `;
+
+export const DeleteButton = styled.div`
+color: red;
+
+:hover{
+  cursor: pointer;
+}
+`
