@@ -4,14 +4,17 @@ import { Route, Redirect } from "react-router-dom";
 
 //Check is user is authenticated
 const isAuthenticated = () => {
-  console.log("isAuthenticated: ", sessionStorage.getItem("token") ? true : false)
+  console.log(
+    "isAuthenticated: ",
+    sessionStorage.getItem("token") ? true : false
+  );
   return sessionStorage.getItem("token") ? true : false;
 };
 
 /***** PRIVATE ROUTE *****/
 export default function PrivateRoute({ children, ...rest }) {
   console.log("...rest", rest);
-  
+
   return (
     <Route
       {...rest}
@@ -29,5 +32,4 @@ export default function PrivateRoute({ children, ...rest }) {
       }
     />
   );
-  
 }

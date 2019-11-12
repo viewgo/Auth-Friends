@@ -11,14 +11,10 @@ import PrivateRoute from "./components/PrivateRoute";
 //STYLES
 import { Container } from "./styles";
 
-
-
-
 /***** APP *****/
 export default function App() {
   return (
     <Container>
-
       <Navigation />
 
       <Switch>
@@ -28,7 +24,6 @@ export default function App() {
         <Route path="/login" component={Login} />
         <Route component={Login} />
       </Switch>
-      
     </Container>
   );
 }

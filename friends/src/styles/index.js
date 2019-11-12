@@ -8,28 +8,26 @@ export const FriendListRow = styled.div`
 `;
 
 export const Form = styled.div`
-display: flex;
-flex-flow: column;
-align-items: center;
-
-width: 50%;
-
-
-
-form{
   display: flex;
   flex-flow: column;
+  align-items: center;
 
-  input{
-    margin-bottom: 10px;
-    width: 200px;
-  }
+  width: 50%;
 
-  button{
-    border: 0
-    padding: 10px;
-    width: 200px;
-  }
+  form{
+    display: flex;
+    flex-flow: column;
+
+    input{
+      margin-bottom: 10px;
+      width: 200px;
+    }
+
+    button{
+      border: 0
+      padding: 10px;
+      width: 200px;
+    }
 }
 `;
 
@@ -86,9 +84,9 @@ export const CardButtons = styled.div`
 `;
 
 export const DeleteButton = styled.div`
-color: red;
+  color: red;
 
-:hover{
-  cursor: pointer;
-}
-`
+  :hover {
+    cursor: pointer;
+  }
+`;

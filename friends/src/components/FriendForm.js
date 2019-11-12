@@ -21,13 +21,13 @@ export default function FriendForm(props) {
   const submitFriend = e => {
     e.preventDefault();
 
-
     console.log("submitted", newFriend);
     console.log("age is: ", Number.isInteger(newFriend.age));
     if (
       newFriend.name !== "" &&
       newFriend.email !== "" &&
-      newFriend.age !== "" && !isNaN(newFriend.age)
+      newFriend.age !== "" &&
+      !isNaN(newFriend.age)
     ) {
       axiosWithAuth()
         .post(`http://localhost:5000/api/friends`, newFriend)

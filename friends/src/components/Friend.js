@@ -16,7 +16,9 @@ export default function Friend(props) {
         <span>{friend.email}</span>
       </CardInfo>
       <CardButtons>
-      <DeleteButton onClick={(e) => props.deleteFriend(e, friend)}>✘</DeleteButton>
+        <DeleteButton onClick={e => props.deleteFriend(e, friend)}>
+          ✘
+        </DeleteButton>
       </CardButtons>
     </Card>
   );

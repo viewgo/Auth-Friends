@@ -50,7 +50,7 @@ const Login = props => {
   return (
     <>
       <h2>{isLoggedIn ? "LOGGED IN!" : "Please login"}</h2>
-      
+
       <form onSubmit={login}>
         <input
           type="text"
@@ -66,7 +66,7 @@ const Login = props => {
         />
         <button>Log in</button>
       </form>
-      </>
+    </>
   );
 };
 

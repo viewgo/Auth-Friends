@@ -1,9 +1,9 @@
 //DEPENDENCIES
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 //STYLES
-import {Nav} from "../styles";
+import { Nav } from "../styles";
 
 /***** NAVIGATION *****/
 export default function Navigation() {

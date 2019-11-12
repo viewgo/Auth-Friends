@@ -46,16 +46,16 @@ export default function FriendList() {
     console.log("delete clicked");
 
     axiosWithAuth()
-    .delete(`http://localhost:5000/api/friends/${friend.id}`)
-    .then(response => {
-      console.log("response after delete", response);      
-    })
-    .catch(error => {
-      console.log("error", error);
-    })
+      .delete(`http://localhost:5000/api/friends/${friend.id}`)
+      .then(response => {
+        console.log("response after delete", response);
+      })
+      .catch(error => {
+        console.log("error", error);
+      });
 
     setTrigger(!trigger);
-  }
+  };
 
   if (data) {
     return (
@@ -65,7 +65,11 @@ export default function FriendList() {
         <FriendListRow>
           <List>
             {data.map(friend => (
-              <Friend key={friend.id} friend={friend} deleteFriend={deleteFriend}/>
+              <Friend
+                key={friend.id}
+                friend={friend}
+                deleteFriend={deleteFriend}
+              />
             ))}
           </List>
 
