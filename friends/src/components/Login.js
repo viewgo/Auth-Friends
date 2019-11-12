@@ -27,6 +27,9 @@ const Login = props => {
 
         sessionStorage.setItem("token", data.payload);
         setIsLoggedIn(true);
+
+        //REDIRECT TO COMPONENT
+        props.history.push("/protected");
       });
   };
 
