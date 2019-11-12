@@ -1,11 +1,16 @@
+//DEPENDENCIES
 import React from "react";
 import {Link} from "react-router-dom";
 
-export default function FriendList() {
+//STYLES
+import {Nav} from "../styles";
+
+/***** NAVIGATION *****/
+export default function Navigation() {
   return (
-    <>
+    <Nav>
       <Link to="/login">Login</Link>
       <Link to="/protected">Friends List</Link>
-    </>
+    </Nav>
   );
 }

@@ -15,6 +15,7 @@ import { Container } from "./styles";
 export default function App() {
   return (
     <Container>
+
       <Navigation />
 
       <Switch>
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/login" component={Login} />
         <Route component={Login} />
       </Switch>
+      
     </Container>
   );
 }

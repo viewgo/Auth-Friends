@@ -1,12 +1,17 @@
+//DEPENDENCIES
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+/***** LOGIN *****/
 const Login = props => {
+  //States
   const [credentials, setCredentials] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const fakeCred = { username: 'Lambda School', password: 'i<3Lambd4' };
+  //Hardcoded credentials
+  const fakeCred = { username: "Lambda School", password: "i<3Lambd4" };
 
+  //Check if user is logged in this session
   useEffect(() => {
     if (sessionStorage.getItem("token")) {
       setIsLoggedIn(true);
@@ -15,11 +20,12 @@ const Login = props => {
     }
   }, []);
 
+  //Login on form submit
   const login = e => {
     e.preventDefault();
 
     axios
-    //CHANGE TO ACTUAL LOGIN
+      //CHANGE TO ACTUAL LOGIN
       .post("http://localhost:5000/api/login", fakeCred)
       .then(response => {
         console.log("response", response);
@@ -28,11 +34,12 @@ const Login = props => {
         sessionStorage.setItem("token", data.payload);
         setIsLoggedIn(true);
 
-        //REDIRECT TO COMPONENT
+        //Redirect on login
         props.history.push("/protected");
       });
   };
 
+  //Input change handler
   const handleChange = e => {
     setCredentials({
       ...credentials,
@@ -41,8 +48,9 @@ const Login = props => {
   };
 
   return (
-    <div>
+    <>
       <h2>{isLoggedIn ? "LOGGED IN!" : "Please login"}</h2>
+      
       <form onSubmit={login}>
         <input
           type="text"
@@ -58,7 +66,7 @@ const Login = props => {
         />
         <button>Log in</button>
       </form>
-    </div>
+      </>
   );
 };
 

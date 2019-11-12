@@ -1,9 +1,12 @@
+//DEPENDENCIES
 import React from "react";
 
+
+/***** FRIENDS LIST *****/
 export default function FriendList() {
   return (
     <>
-      <h1>Friend List</h1>
+      <h2>Friend List</h2>
     </>
   );
 }
